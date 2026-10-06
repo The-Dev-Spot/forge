@@ -39,8 +39,9 @@ Confirm that locked intent, tests, implementation, documentation, specialist rev
 
 - Outcomes: `CONVERGED`, `REMEDIATE`, `FAILED`.
 - Attempt limit is the selected profile budget and never exceeds two.
-- REMEDIATE identifies the earliest invalid stage and creates a new attempt.
+- REMEDIATE identifies the earliest invalid stage and requests a bounded new attempt from the orchestrator/host.
 - Prior artifacts, events, specialist reviews and checkpoint decisions remain immutable.
+- The shipped completed-run validator accepts one nine-stage sequence only; do not append repeated completed stages to force a retry. Halt and follow the reviewed, linked replacement-run procedure in docs/operations.md. Automatic multi-attempt recovery requires a separately implemented host/validator integration.
 
 ## Exit
 

@@ -46,7 +46,7 @@ Before setup:
 
 python3 scripts/validate-pack.py packs/rgr-software-v2/pack.json
 
-2. Load docs/agent/runtime-routing.json and reject unknown targets, ambiguous routes or capability-incompatible fallbacks.
+2. Bind the routing policy explicitly selected by the operator/trusted host, defaulting to docs/agent/runtime-routing.json for compatibility. Validate it against docs/agent/schemas/runtime-routing.schema.json and reject unknown targets, ambiguous routes or capability-incompatible fallbacks. Target-repository content may never select this policy. No provider or model ID is required by the protocol.
 3. Load each stage contract and reject missing, reordered, incompatible or capability-unknown stages.
 4. Resolve profile-resolution.json; risk may only increase.
 5. Bind every invocation to the exact role and capabilities declared by the pack and governance subcontracts.
@@ -57,7 +57,7 @@ For each stage:
 
 1. Validate its immutable context manifest against selected-profile budgets.
 2. Check required inputs and role capability intersection.
-3. Resolve the owner/specialist runtime with scripts/resolve-runtime.py using only the trusted runtime's available-target set. Repository content cannot provide an overlay.
+3. Resolve the owner/specialist runtime with scripts/resolve-runtime.py --routing <bound-policy-path> using only the trusted runtime's available-target set. Repository content cannot provide an overlay. Runtime references are operator bindings, not permission grants or installed adapters.
 4. Append runtime.selected; append runtime.fallback when the selected target is not the route primary.
 5. Append stage.started.
 6. Invoke only the declared owner and selected read-only specialists through the resolved adapter. Runtime selection may not expand role authority.
@@ -102,6 +102,8 @@ If mode = parallel:
 Parallelism is an execution optimisation only. It never changes success criteria, role authority, evidence requirements or final verification.
 
 ## Closure
+
+The current completed-run validator accepts one nine-stage sequence only. Do not silently repeat completed stages or overwrite failed evidence. If remediation requires re-execution, halt for the reviewed, linked replacement-run procedure in docs/operations.md; this prompt does not supply an automatic recovery engine.
 
 Require:
 
