@@ -17,7 +17,7 @@ Turn immutable task intent and PREPARE findings into unambiguous success criteri
 
 ## Reads
 
-- `CLAUDE.md`, the stage contract and applicable project conventions.
+- `AGENTS.md`, the stage contract and applicable project conventions.
 - Run artifacts: `plan-input.md`, `profile-resolution.json`, `repository-intelligence.json`, `context-brainstorm.json`.
 - Only the repository files, trusted project facts and authorised direct sources allowed by the context manifest.
 - Selected governed learnings as advisory context, revalidated against current evidence.
