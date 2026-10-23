@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Links and evaluation snapshots name `The-Dev-Spot/forge` and `The-Dev-Spot/forge-console`, where both repositories now live.
 - Simplified project status and handover guidance; kept source snapshots focused on reproducibility.
 - Added a create-only governed pilot helper: disposable target, passing baseline, all four draft operator files, exact binding hashes and a capability review worksheet. Registrations remain unavailable until independently qualified.
 - Added exact source-pair snapshots and run reports with observed test receipts, evidence hashes, timing and clearly labelled operator notes, including failed/cancelled attempts.

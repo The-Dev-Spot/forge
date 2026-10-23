@@ -12,7 +12,7 @@ PREPARE → BRAINSTORM → PLAN → ANALYZE → RED → GREEN → REFACTOR → V
 
 Version marker: `2.3.0`. Changes under `Unreleased` in [CHANGELOG.md](CHANGELOG.md), including the optional operator tools and model-configuration handoff, are present on the current branch but are not a new tagged release.
 
-Optional [project setup and review tools](docs/agent/operator-tools.md) provide five-question project notes, locked-plan checks and spec/code/docs reconciliation. The [governed host](docs/governed-host.md) adds model-neutral HTTP execution, Docker commands, locally bound receipts and explicit recovery. [Forge Console](https://github.com/sashafelix/forge-console) can configure models and review or control registered host runs through its cockpit.
+Optional [project setup and review tools](docs/agent/operator-tools.md) provide five-question project notes, locked-plan checks and spec/code/docs reconciliation. The [governed host](docs/governed-host.md) adds model-neutral HTTP execution, Docker commands, locally bound receipts and explicit recovery. [Forge Console](https://github.com/The-Dev-Spot/forge-console) can configure models and review or control registered host runs through its cockpit.
 
 **Local RGR** is Forge's versioned delivery protocol; RGR means red, green, refactor.
 Existing agent names, pack IDs and run evidence formats retain their compatibility

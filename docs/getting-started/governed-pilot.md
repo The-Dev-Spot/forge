@@ -11,7 +11,7 @@ subscriptions are separate CLI runtimes; they do not supply governed HTTP access
 
 ## 1. Choose a model and test image
 
-In [Console](https://github.com/sashafelix/forge-console), open **Pipeline configuration
+In [Console](https://github.com/The-Dev-Spot/forge-console), open **Pipeline configuration
 → Models & providers**. Add your approved provider and model, create a profile,
 assign every role, review fallback order and export `runtime-configuration.json`.
 Model IDs are yours to choose. A model may serve several roles, but VERIFY always

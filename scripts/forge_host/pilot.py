@@ -30,9 +30,9 @@ def evaluation_snapshot(console: Path) -> dict:
     package = json.loads(read_bytes(console, 'package.json'))
     if package.get('name') != 'agent-pipeline-ui':
         raise ValueError('Select the Forge Console source checkout')
-    pair = {'forge': {'repository': 'https://github.com/sashafelix/forge',
+    pair = {'forge': {'repository': 'https://github.com/The-Dev-Spot/forge',
                       'version_marker': (ROOT / 'VERSION').read_text().strip(), **revision()},
-            'console': {'repository': 'https://github.com/sashafelix/forge-console',
+            'console': {'repository': 'https://github.com/The-Dev-Spot/forge-console',
                         'version_marker': package['version'], **revision(console)}}
     if any(item['dirty'] for item in pair.values()):
         raise ValueError('Both source checkouts must be clean before pinning an evaluation pair')

@@ -12,7 +12,7 @@ Contract utilities need Python 3.11+, Git 2.30+ and a terminal. They use the Pyt
 Commands below use Bash syntax and `python3`. On native Windows, use the installed Python 3 command (`py -3` or `python`) instead. The [evidence example](evidence-example.md) uses a portable Python script rather than shell-specific temporary-directory commands.
 
 ```bash
-git clone https://github.com/sashafelix/forge.git
+git clone https://github.com/The-Dev-Spot/forge.git
 cd forge
 git rev-parse HEAD
 python3 --version
@@ -39,7 +39,7 @@ For a different provider or host, read [model portability](../model-portability.
 
 ## Optional configuration companion
 
-[Forge Console](https://github.com/sashafelix/forge-console) can prepare project facts
+[Forge Console](https://github.com/The-Dev-Spot/forge-console) can prepare project facts
 and provider/model profiles, create disposable pilot inputs through a registered
 host, and control governed runs from its cockpit. Reviewed exports and capability
 registrations are checked by Forge. See [runtime configuration](../agent/runtime-configuration.md).

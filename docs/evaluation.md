@@ -61,4 +61,4 @@ Console packaging already produces `SOURCE_REVISION` and `SHA256SUMS`. Verify th
 against the pinned pair; record whether each package is signed. Unsigned development
 packages and signed distribution builds must be described accurately. The owner
 can then approve tags and publication. See Console's
-[distribution guide](https://github.com/sashafelix/forge-console/blob/main/docs/distribution.md).
+[distribution guide](https://github.com/The-Dev-Spot/forge-console/blob/main/docs/distribution.md).
